@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.net.http.HttpResponse;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,10 +15,11 @@ public class health {
 
     @ResponseBody
     @RequestMapping("/health")
-    public String health(){
+    public String main(){
         TestVO testVO = new TestVO();
         testVO.setTest("ggggg");
-        System.out.println(testVO.toString());
+        System.out.println(testVO);
+        System.out.println("gd");
         return "health";
     }
 
