@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   devtools:
@@ -22,8 +22,18 @@ spring:
     # mariadb 설정
     database-platform: org.hibernate.dialect.MariaDB103Dialect
     hibernate:
+      type: # 쿼리 파라미터 표기
+        descriptor:
+          sql: trace
+#      naming: # 카멜케이스(이거 설정하면 안되네;; - 기본적으로 스네이크 케이스로 변경시켜준다고함)
+#        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       ddl-auto: update
     properties:
       open-in-view: false
       generate-ddl: true
       show-sql: true
+      format_sql: true # sql 로그
+      use_sql_comments: true # sql 로그
+    show-sql: true
+

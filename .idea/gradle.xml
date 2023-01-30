@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/common-module" />
             <option value="$PROJECT_DIR$/main-module" />
+            <option value="$PROJECT_DIR$/test-module" />
           </set>
         </option>
       </GradleProjectSettings>

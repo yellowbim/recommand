@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RECOMMAND.iml" filepath="$PROJECT_DIR$/.idea/modules/RECOMMAND.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/common-module/RECOMMAND.common-module.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common-module/RECOMMAND.common-module.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/main-module/RECOMMAND.main-module.main.iml" filepath="$PROJECT_DIR$/.idea/modules/main-module/RECOMMAND.main-module.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/test-module/RECOMMAND.test-module.main.iml" filepath="$PROJECT_DIR$/.idea/modules/test-module/RECOMMAND.test-module.main.iml" />
     </modules>
   </component>
 </project>
