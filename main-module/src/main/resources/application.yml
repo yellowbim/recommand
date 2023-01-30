@@ -33,7 +33,7 @@ spring:
       open-in-view: false
       generate-ddl: true
       show-sql: true
-      format_sql: true # sql 로그
-      use_sql_comments: true # sql 로그
+#      format_sql: true # sql 로그
+#      use_sql_comments: true # sql 로그
     show-sql: true
 

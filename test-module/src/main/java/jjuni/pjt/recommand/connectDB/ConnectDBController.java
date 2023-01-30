@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,8 +41,8 @@ public class ConnectDBController {
 
     // 회원번호로 회원 삭제
     @DeleteMapping(value = "/{mbrNo}", produces = { MediaType.APPLICATION_JSON_VALUE })
-    public ResponseEntity<Void> deleteMember(@PathVariable("mbrNo") Integer mbrNo) {
-        connectDBService.deleteById(mbrNo);
+    public ResponseEntity<Void> deleteMember(@PathVariable("mbrNo") List<Integer> mbrNo) {
+        connectDBService.deleteByMsgIdIn(mbrNo);
         return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
     }
 
@@ -53,10 +54,10 @@ public class ConnectDBController {
 //    }
 
     // 회원 입력
-//    @PostMapping
-//    public ResponseEntity<SdkSmsSend> save(SdkSmsSend member) {
-//        return new ResponseEntity<SdkSmsSend>(connectDBService.save(member), HttpStatus.OK);
-//    }
+    @PostMapping
+    public ResponseEntity<SdkSmsSend> save(SdkSmsSend member) {
+        return new ResponseEntity<SdkSmsSend>(connectDBService.save(member), HttpStatus.OK);
+    }
 //
 //    // 회원 입력
 //    @RequestMapping(value="/saveMember", method = RequestMethod.GET)
