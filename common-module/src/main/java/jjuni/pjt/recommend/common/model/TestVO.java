@@ -1,4 +1,4 @@
-package jjuni.pjt.recommand.common.model;
+package jjuni.pjt.recommend.common.model;
 
 import lombok.Data;
 

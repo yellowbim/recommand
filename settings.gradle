@@ -2,4 +2,5 @@ rootProject.name = 'RECOMMAND'
 include 'common-module'
 include 'main-module'
 include 'test-module'
+include 'kafka-module'
 

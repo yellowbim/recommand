@@ -1,6 +1,5 @@
-package jjuni.pjt.recommand.common.http;
+package jjuni.pjt.recommend.common.http;
 
-import com.mongodb.lang.Nullable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 

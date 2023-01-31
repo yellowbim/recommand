@@ -58,6 +58,9 @@ subprojects {
 		// spring data jpa 를 사용
 		compileOnly('org.springframework.boot:spring-boot-starter-data-jpa')
 		implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.4'
+
+		// kafka
+		implementation 'org.springframework.kafka:spring-kafka'
 	}
 
 	bootWar { enabled = false }
@@ -108,12 +111,18 @@ project(':main-module') {
 
 		compileOnly(project(":common-module"))
 		compileOnly(project(":test-module"))
+		compileOnly(project(":kafka-module"))
 	}
 }
 
-//project(':test-module') {
-//	dependencies {
-//		compileOnly('org.springframework.boot:spring-boot-starter-data-jpa')
-//		implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.4'
-//	}
-//}
+project(':common-module') {
+	dependencies {
+//		implementation 'org.springframework.kafka:spring-kafka'
+	}
+}
+
+project(':kafka-module') {
+	dependencies {
+//		implementation 'org.springframework.kafka:spring-kafka'
+	}
+}

@@ -1,4 +1,4 @@
-package jjuni.pjt.recommand.connectDB;
+package jjuni.pjt.recommend.connectDB;
 
 import lombok.*;
 

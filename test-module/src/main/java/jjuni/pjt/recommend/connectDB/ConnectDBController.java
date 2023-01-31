@@ -1,4 +1,4 @@
-package jjuni.pjt.recommand.connectDB;
+package jjuni.pjt.recommend.connectDB;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 

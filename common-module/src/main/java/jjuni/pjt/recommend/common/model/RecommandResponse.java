@@ -1,8 +1,6 @@
-package jjuni.pjt.recommand.common.model;
+package jjuni.pjt.recommend.common.model;
 
 import lombok.Getter;
-import org.springframework.context.MessageSource;
-import org.springframework.context.i18n.LocaleContextHolder;
 
 @Getter
 public class RecommandResponse {
