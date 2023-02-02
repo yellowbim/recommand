@@ -24,15 +24,14 @@ allprojects {
 }
 
 
-// 하위 프로젝트
+// 하위 프로젝트(root 프로젝트는 해당되지 않음)
 subprojects {
 	apply plugin: 'org.springframework.boot'
 	apply plugin: 'io.spring.dependency-management'
 	apply plugin: 'java'
-	apply plugin: 'war'
 
-	sourceCompatibility = '11'
-	targetCompatibility  = '11'
+	sourceCompatibility = '1.8' // 이거때문에 war를 배포해도 안올라갔었음;; java 버전이랑 맞춰야하는데 11이 아니었나봄
+	targetCompatibility  = '1.8' // 이거때문에 war를 배포해도 안올라갔었음;; java 버전이랑 맞춰야하는데 11이 아니었나봄
 
 	configurations {
 		compileOnly {
@@ -63,9 +62,6 @@ subprojects {
 		implementation 'org.springframework.kafka:spring-kafka'
 	}
 
-	bootWar { enabled = false }
-	jar { enabled = true }
-
 	// 해당 task로 서브 모듈 추가시 기초적인 디렉토리를 자동으로 생성해줍니다.
 	task initSourceFolders {
 		sourceSets*.java.srcDirs*.each {
@@ -83,23 +79,10 @@ subprojects {
 }
 
 project(':main-module') {
-	def propertyFile = 'application.yml'
-	def logbackFile = 'logback.xml'
+	apply plugin: 'war'
 
 	war {
-		archiveBaseName = 'ROOT'
-		webInf {
-			from(sourceSets.main.resources) { // 특정 파일들을 가지고 올라감 (여기서는 ${profile}  옵션이 안먹는듯?)
-//				include logbackFile, propertyFile
-//				into 'classes'
-
-				// profile의 이름을 기본으로 변경
-//				if (isProfile) {
-//					rename(propertyFile, 'application.properties')
-//					rename(logbackFile, 'logback.xml')
-//				}
-			}
-		}
+		archiveName('ROOT.war')
 	}
 
 	dependencies {
@@ -109,33 +92,30 @@ project(':main-module') {
 //		runtimeOnly 'mysql:mysql-connector-java' // MYSQL
 //		runtimeOnly 'org.postgresql:postgresql' // PostgreSQL
 
-		compileOnly(project(":common-module"))
-		compileOnly(project(":test-module"))
-		compileOnly(project(":kafka-module"))
+		implementation(project(":common-module"))
+		implementation(project(":test-module"))
+		implementation(project(":kafka-module"))
 	}
 }
 
 project(':common-module') {
-	dependencies {
-//		// xml 파싱을 위한 라이브러리
-//		implementation group: 'org.jdom', name: 'jdom2', version: '2.0.6.1'
-//
-//		// xml을 json으로 바꿔주는 라이브러리
-//		compileOnly group: 'org.json', name: 'json', version: '20180813'
-//
-//		// 파일 이름 체크를 위한 라이브러리
-//		implementation 'commons-io:commons-io:2.5'
+	// bootWar { enabled=false}
+	jar { enabled=true }
 
-//		implementation 'org.springframework.kafka:spring-kafka'
-	}
+	dependencies {}
 }
 
 project(':kafka-module') {
-	dependencies {
-	}
+	// bootWar { enabled=false}
+	jar { enabled=true }
+
+	dependencies {}
 }
 
 project(':test-module') {
+	// bootWar { enabled=false}
+	jar { enabled=true }
+
 	dependencies {
 		// xml 파싱을 위한 라이브러리
 //		implementation group: 'org.jdom', name: 'jdom2', version: '2.0.6.1'

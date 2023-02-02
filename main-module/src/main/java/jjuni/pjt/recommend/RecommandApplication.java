@@ -2,11 +2,18 @@ package jjuni.pjt.recommend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class RecommandApplication {
+public class RecommandApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {
         SpringApplication.run(RecommandApplication.class, args);
+    }
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return super.configure(builder);
     }
 
 }
