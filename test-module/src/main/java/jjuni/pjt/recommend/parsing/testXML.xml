@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RCP method="ressvr_res">s
+  <Result>0</Result>
+  <Resource>
+    <Category>MAS0</Category>
+    <ResourceID>MAS_119.205.196.242:80</ResourceID>
+    <Address>119.205.196.242</Address>
+    <Port>80</Port>
+  </Resource>
+</RCP>

@@ -117,12 +117,35 @@ project(':main-module') {
 
 project(':common-module') {
 	dependencies {
+//		// xml 파싱을 위한 라이브러리
+//		implementation group: 'org.jdom', name: 'jdom2', version: '2.0.6.1'
+//
+//		// xml을 json으로 바꿔주는 라이브러리
+//		compileOnly group: 'org.json', name: 'json', version: '20180813'
+//
+//		// 파일 이름 체크를 위한 라이브러리
+//		implementation 'commons-io:commons-io:2.5'
+
 //		implementation 'org.springframework.kafka:spring-kafka'
 	}
 }
 
 project(':kafka-module') {
 	dependencies {
-//		implementation 'org.springframework.kafka:spring-kafka'
+	}
+}
+
+project(':test-module') {
+	dependencies {
+		// xml 파싱을 위한 라이브러리
+//		implementation group: 'org.jdom', name: 'jdom2', version: '2.0.6.1'
+
+		// xml을 json으로 바꿔주는 라이브러리
+//		compileOnly group: 'org.json', name: 'json', version: '20180813'
+
+		// 파일 이름 체크를 위한 라이브러리
+//		implementation 'commons-io:commons-io:2.5'
+
+		compileOnly(project(":common-module"))
 	}
 }

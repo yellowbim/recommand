@@ -12,7 +12,6 @@ public class ConsumerService {
 
     @KafkaListener(topics = "testTopic11", groupId = "BBB")
     public void consume(String message) throws IOException {
-        System.out.println("name = " + message);
         System.out.println("consume message = " + message);
     }
 

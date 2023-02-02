@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FUP method="POST">
+  <Path>/TCSMSG/test/test/test/test1</Path>
+  <Result>0</Result>
+  <Message>Uploaded성공</Message>
+</FUP>

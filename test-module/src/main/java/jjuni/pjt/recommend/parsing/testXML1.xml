@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RCP method="test">
+    <Resource>
+        <Category>ttttttt</Category>
+        <ResourceID>qqqqqqqqqqqqq</ResourceID>
+        <Address>111.111.111.111</Address>
+        <Port>9999</Port>
+    </Resource>
+</RCP>
