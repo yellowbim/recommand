@@ -41,6 +41,4 @@ public class SdkSmsSend {
     private String sendProcTime;   //전송 처리 시간: YYYYMMDDHHMMSS
     private Integer stdId;   //타 규격 연동 시 사용
 
-
-
 }
