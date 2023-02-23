@@ -3,6 +3,10 @@ package jjuni.pjt.recommend.config.kafka;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
 
+/**
+ * 추후에 각각의 config를 설정할때 필요한 부분!
+ */
+
 @EnableKafka
 @Configuration
 public class KafkaProducerConfig {

@@ -5,10 +5,11 @@ spring:
   devtools:
     livereload:
       enabled: true # auto reload
-
   thymeleaf:
     enabled: false
 
+############################################
+################# mariaDB ##################
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://localhost:3306/test?useUnicode=yes&characterEncoding=UTF-8
@@ -16,7 +17,15 @@ spring:
     password: test1234
 
 ############################################
-################ jpa ############
+################## mongo ###################
+  data:
+    mongodb:
+      host: 211.59.179.242
+      port: 17017
+      database: test
+
+############################################
+################## jpa #####################
   jpa:
     database: mysql
     # mysql 설정
@@ -39,8 +48,8 @@ spring:
 #      use_sql_comments: true # sql 로그
     show-sql: true
 
-########################################
-################ kafka #################
+############################################
+################## kafka ###################
   kafka:
     my:
       push:
@@ -61,23 +70,3 @@ spring:
       # JSON 데이터를 보낼 것이라면 JsonDeserializer
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
-
-#kafka:
-#  bootstrap-servers: localhost:9092
-#  my:
-#    push:
-#      topic:
-#        name: testTopic11
-#  consumer:
-#    group-id: AAA # 그룹별 메시징때문에 넣은듯...? 근데 kafka상에서 하는게 안되는거같음..
-#    auto-offset-reset: earliest
-#    # 데이터를 보낼 때, key/value를 직렬화
-#    # JSON 데이터를 보낼 것이라면 JsonDeserializer
-#    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-#    value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-##      enable-auto-commit: false
-#  producer:
-#    # 데이터를 보낼 때, key/value를 직렬화
-#    # JSON 데이터를 보낼 것이라면 JsonDeserializer
-#    key-serializer: org.apache.kafka.common.serialization.StringSerializer
-#    value-serializer: org.apache.kafka.common.serialization.StringSerializer

@@ -6,6 +6,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-module/RECOMMAND.kafka-module.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-module/RECOMMAND.kafka-module.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/main-module/RECOMMAND.main-module.main.iml" filepath="$PROJECT_DIR$/.idea/modules/main-module/RECOMMAND.main-module.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/test-module/RECOMMAND.test-module.main.iml" filepath="$PROJECT_DIR$/.idea/modules/test-module/RECOMMAND.test-module.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common-module/RECOMMEND.common-module.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common-module/RECOMMEND.common-module.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-module/RECOMMEND.kafka-module.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-module/RECOMMEND.kafka-module.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/main-module/RECOMMEND.main-module.main.iml" filepath="$PROJECT_DIR$/.idea/modules/main-module/RECOMMEND.main-module.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/test-module/RECOMMEND.test-module.main.iml" filepath="$PROJECT_DIR$/.idea/modules/test-module/RECOMMEND.test-module.main.iml" />
     </modules>
   </component>
 </project>

@@ -1,4 +1,4 @@
-rootProject.name = 'RECOMMAND'
+rootProject.name = 'RECOMMEND'
 include 'common-module'
 include 'main-module'
 include 'test-module'

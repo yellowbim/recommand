@@ -6,14 +6,27 @@
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.24/13a394eed5c4f9efb2a6d956e2086f1d81e857d9/lombok-1.18.24.jar" />
+          <entry name="$PROJECT_DIR$/../../96.gradle/gradle-7.6/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.24/13a394eed5c4f9efb2a6d956e2086f1d81e857d9/lombok-1.18.24.jar" />
         </processorPath>
-        <module name="jjuni.pjt.RECOMMAND.kafka-module.main" />
-        <module name="jjuni.pjt.RECOMMAND.main-module.main" />
-        <module name="jjuni.pjt.RECOMMAND.test-module.main" />
-        <module name="jjuni.pjt.RECOMMAND.common-module.main" />
+        <module name="RECOMMEND.main-module.main" />
+        <module name="RECOMMEND.test-module.main" />
+        <module name="RECOMMEND.common-module.main" />
+        <module name="RECOMMEND.kafka-module.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="jjuni.pjt.RECOMMAND.common-module.main" target="1.8" />
+      <module name="jjuni.pjt.RECOMMAND.kafka-module.main" target="1.8" />
+      <module name="jjuni.pjt.RECOMMAND.main-module.main" target="1.8" />
+      <module name="jjuni.pjt.RECOMMAND.test-module.main" target="1.8" />
+      <module name="RECOMMAND.common-module" target="1.8" />
+      <module name="RECOMMAND.common-module.test" target="1.8" />
+      <module name="RECOMMAND.kafka-module" target="1.8" />
+      <module name="RECOMMAND.kafka-module.test" target="1.8" />
+      <module name="RECOMMAND.main-module" target="1.8" />
+      <module name="RECOMMAND.main-module.test" target="1.8" />
+      <module name="RECOMMAND.test-module" target="1.8" />
+      <module name="RECOMMAND.test-module.test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
