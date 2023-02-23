@@ -18,12 +18,12 @@ public class health {
 
     @ResponseBody
     @RequestMapping("/health")
-    public String main(){
+    public ResponseEntity main(){
         TestVO testVO = new TestVO();
         testVO.setTest("ggggg");
         System.out.println(testVO);
         System.out.println("gd");
-        return "health";
+        return new ResponseEntity<>("health", HttpStatus.OK);
     }
 
     @RequestMapping("/test")
