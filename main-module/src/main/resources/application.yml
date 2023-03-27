@@ -12,7 +12,8 @@ spring:
 ################# mariaDB ##################
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/test?useUnicode=yes&characterEncoding=UTF-8
+#    url: jdbc:mariadb://localhost:3306/test?useUnicode=yes&characterEncoding=UTF-8
+    url: jdbc:mariadb://211.59.179.242:3306/test?useUnicode=yes&characterEncoding=UTF-8
     username: test
     password: test1234
 
@@ -56,16 +57,19 @@ spring:
         topic:
           name: testTopic11
     consumer:
-      bootstrap-servers: localhost:9092 # 집 서버 : 58.234.10.71:9092
-      group-id: BBB # 그룹별 메시징때문에 넣은듯...? 근데 kafka상에서 하는게 안되는거같음..
+#      bootstrap-servers: localhost:19092,localhost:29092,localhost:39092
+      bootstrap-servers: 211.59.179.242:19092,211.59.179.242:29092,211.59.179.242:39092 # 외부 <-> 서버
+      group-id: AAA # 그룹별 메시징때문에 넣은듯...? 근데 kafka상에서 하는게 안되는거같음..
       auto-offset-reset: earliest
+
       # 데이터를 보낼 때, key/value를 직렬화
       # JSON 데이터를 보낼 것이라면 JsonDeserializer
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 #      enable-auto-commit: false
     producer:
-      bootstrap-servers: localhost:9092
+#      bootstrap-servers: localhost:19092,localhost:29092,localhost:39092
+      bootstrap-servers: 211.59.179.242:19092,211.59.179.242:29092,211.59.179.242:39092 # 외부 <-> 서버
       # 데이터를 보낼 때, key/value를 직렬화
       # JSON 데이터를 보낼 것이라면 JsonDeserializer
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
