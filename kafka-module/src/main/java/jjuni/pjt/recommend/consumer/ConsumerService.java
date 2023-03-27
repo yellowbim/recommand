@@ -10,7 +10,7 @@ import java.io.IOException;
 @EnableKafka // 이 옵션을 넣어야 사용가능함
 public class ConsumerService {
 
-    @KafkaListener(topics = "testTopic11", groupId = "AAA")
+    @KafkaListener(topics = "chatting", groupId = "AAA")
     public void consume(String message) throws IOException {
         System.out.println("consume AAA = " + message);
     }

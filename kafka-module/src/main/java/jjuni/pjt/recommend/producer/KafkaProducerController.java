@@ -19,11 +19,11 @@ public class KafkaProducerController {
      */
     @ResponseBody
     @RequestMapping("/producerTest")
-    public String sendMessage(@RequestBody JsonData data) {
+    public JsonData sendMessage(@RequestBody JsonData data) {
         Object obj = data.getMessage();
 
         kafkaProducerService.sendMessage(data.getTopic(), data.getMessage());
-        return "테스트임다";
+        return data;
     }
 
 }

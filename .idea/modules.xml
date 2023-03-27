@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kafka-module/RECOMMEND.kafka-module.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kafka-module/RECOMMEND.kafka-module.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/main-module/RECOMMEND.main-module.main.iml" filepath="$PROJECT_DIR$/.idea/modules/main-module/RECOMMEND.main-module.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/test-module/RECOMMEND.test-module.main.iml" filepath="$PROJECT_DIR$/.idea/modules/test-module/RECOMMEND.test-module.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/websocket-module/RECOMMEND.websocket-module.main.iml" filepath="$PROJECT_DIR$/.idea/modules/websocket-module/RECOMMEND.websocket-module.main.iml" />
     </modules>
   </component>
 </project>

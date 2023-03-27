@@ -60,6 +60,11 @@ subprojects {
 
 		// kafka
 		implementation 'org.springframework.kafka:spring-kafka'
+
+		// websocket
+		implementation 'org.springframework.boot:spring-boot-starter-websocket'
+		implementation 'org.webjars:sockjs-client:1.1.2'
+		implementation 'org.webjars:stomp-websocket:2.3.3-1'
 	}
 
 	// 해당 task로 서브 모듈 추가시 기초적인 디렉토리를 자동으로 생성해줍니다.
@@ -95,6 +100,7 @@ project(':main-module') {
 		implementation(project(":common-module"))
 		implementation(project(":test-module"))
 		implementation(project(":kafka-module"))
+		implementation(project(":websocket-module"))
 	}
 }
 
@@ -126,6 +132,16 @@ project(':test-module') {
 		// 파일 이름 체크를 위한 라이브러리
 //		implementation 'commons-io:commons-io:2.5'
 
+		compileOnly(project(":common-module"))
+		compileOnly(project(":websocket-module"))
+	}
+}
+
+project(':websocket-module') {
+	// bootWar { enabled=false}
+	jar { enabled=true }
+
+	dependencies {
 		compileOnly(project(":common-module"))
 	}
 }

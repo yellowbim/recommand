@@ -3,4 +3,6 @@ include 'common-module'
 include 'main-module'
 include 'test-module'
 include 'kafka-module'
+include 'kafka-module'
+include 'websocket-module'
 

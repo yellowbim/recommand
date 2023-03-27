@@ -12,6 +12,7 @@
         <module name="RECOMMEND.test-module.main" />
         <module name="RECOMMEND.common-module.main" />
         <module name="RECOMMEND.kafka-module.main" />
+        <module name="RECOMMEND.websocket-module.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">

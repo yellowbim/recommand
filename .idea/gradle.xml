@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/kafka-module" />
             <option value="$PROJECT_DIR$/main-module" />
             <option value="$PROJECT_DIR$/test-module" />
+            <option value="$PROJECT_DIR$/websocket-module" />
           </set>
         </option>
       </GradleProjectSettings>
