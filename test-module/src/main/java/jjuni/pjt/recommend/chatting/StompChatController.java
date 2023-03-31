@@ -17,12 +17,14 @@ public class StompChatController {
     //"/pub/chat/enter"
     @MessageMapping(value = "/chat/enter")
     public void enter(ChatMessageVO message){
+        System.out.println("chatmessage vo " + message.toString());
         message.setMessage(message.getWriter() + "님이 채팅방에 참여하였습니다.");
         template.convertAndSend("/sub/chat/room/" + message.getRoomId(), message);
     }
 
     @MessageMapping(value = "/chat/message")
     public void message(ChatMessageVO message){
+
         template.convertAndSend("/sub/chat/room/" + message.getRoomId(), message);
     }
 }

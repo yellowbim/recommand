@@ -11,6 +11,7 @@ import java.util.UUID;
 public class ChatRoomVO {
     private String roomId;
     private String name;
+    private String writer;
     private Set<WebSocketSession> sessions = new HashSet<>();
     //WebSocketSession은 Spring에서 Websocket Connection이 맺어진 세션
 

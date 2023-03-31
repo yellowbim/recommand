@@ -9,18 +9,20 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 @Configuration
 @EnableWebSocketMessageBroker
 public class ChatConfig implements WebSocketMessageBrokerConfigurer {
-    // websocket connect 를 위한설정
+    // websocket connect 를 위한설정 (handshake를 여기서 진행)
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/ws")
+        registry.addEndpoint("/stomp/chat")
 //                .setAllowedOrigins("*")
-                .setAllowedOriginPatterns("*")
+                .setAllowedOriginPatterns("*", "http://localhost:3000")
                 .withSockJS();
     }
 
-    // 메시지를 받을 경로 설정
+    // 메시지를 받을 경로 설정 (/test 들어온 STOPM 메시지는 @Controller객체의 @MessageMapping 메서드로 라우팅됨)
+    // 또한 /topic, /queue로 Broadcasting 된다
     @Override
     public void configureMessageBroker(MessageBrokerRegistry config) {
-        config.enableSimpleBroker("/send");
+        config.setApplicationDestinationPrefixes("/pub");
+        config.enableSimpleBroker("/sub");
     }
 }
