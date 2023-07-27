@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 
 public class Response extends ResponseEntity {
 
-    public Response(HttpStatus status) {
+    public Response(HttpStatus status, String message) {
         super(status);
     }
 
