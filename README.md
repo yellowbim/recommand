@@ -1,1 +1,1 @@
-# recommand
+# recommand# lotto_stock
